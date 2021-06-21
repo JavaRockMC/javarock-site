@@ -3,30 +3,28 @@ import util from 'util';
 import * as stream from 'stream';
 import { nanoid } from 'nanoid';
 import { once } from 'events';
-import { LoggerConstructorOptions } from "../types/logger";
 
 const finished = util.promisify(stream.finished);
 
-export class Logger {
+export default class Logger {
     file: string;
-    verbose: Function;
     dateAsEpoch: boolean;
     includeUniqueIdentifier: boolean;
-    uniqueIdentifierLength: number = 15;
-    constructor(file: string, { verbose = console.log, dateAsEpoch = true, includeUniqueIdentifier = true, uniqueIdentifierLength }: LoggerConstructorOptions) {
+    uniqueIdentifierLength: number;
+    constructor(file: string, {
+        dateAsEpoch = true,
+        includeUniqueIdentifier = true,
+        uniqueIdentifierLength = 15
+    }: { dateAsEpoch?: boolean; includeUniqueIdentifier?: boolean; uniqueIdentifierLength?: number; } = {}) {
         this.file = file;
-        this.verbose = verbose;
         this.dateAsEpoch = dateAsEpoch;
         this.includeUniqueIdentifier = includeUniqueIdentifier;
-
-        if (uniqueIdentifierLength) {
-            this.uniqueIdentifierLength = uniqueIdentifierLength;
-        }
+        this.uniqueIdentifierLength = uniqueIdentifierLength;
     }
 
     async log(message: string): Promise<void> {
         const writeStream: fs.WriteStream = fs.createWriteStream(this.file, { encoding: 'utf8' });
-        let fullMessage: string = `LOGGED AT ${Date.now()}: ${message}`
+        let fullMessage: string = `LOGGED AT ${this.dateAsEpoch ? Date.now() : new Date()}: ${message}`
 
         if (this.includeUniqueIdentifier) {
             fullMessage += ` | ID: ${nanoid(this.uniqueIdentifierLength)}}`;

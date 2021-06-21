@@ -1,0 +1,7 @@
+.descriptioncontainer {
+    display: flex;
+    margin: 0 auto;
+    text-justify: center;
+    text-align: center;
+    align-items: center;
+}

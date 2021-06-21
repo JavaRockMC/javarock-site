@@ -3,5 +3,6 @@
 vscode*
 
 *.js
+*.log
 
 !.gitignore
