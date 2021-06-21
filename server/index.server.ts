@@ -13,6 +13,10 @@ app.use(express.static(path.join(__dirname, "..", "src", "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+
+})
+
 try {
     app.listen(MAIN_PORT, () => {
         console.log(`App is listening on main port ${MAIN_PORT}`);

@@ -1,4 +1,2 @@
-@echo off
-tsc
-node server/server.js
+tsc & node server/index.server.js
 pause
