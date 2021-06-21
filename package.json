@@ -1,0 +1,24 @@
+{
+  "name": "javarock-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/035WasTaken/javarock-site.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/035WasTaken/javarock-site/issues"
+  },
+  "homepage": "https://github.com/035WasTaken/javarock-site#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "got": "^11.8.2"
+  }
+}
