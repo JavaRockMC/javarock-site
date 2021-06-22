@@ -9,23 +9,27 @@ import {
 } from './constants'
 
 const app = express();
-const errorLogger = new Logger(path.join(__dirname, ".", "logs", "errors.log"))
+const errorLogger = new Logger(path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false });
+const requestLogger = new Logger(path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false });
 
 app.use(express.static(path.join(__dirname, "..", "src", "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('*', (req, res) => {
-    res.json('L')
+app.get('/api/test/stats.html', (req, res) => {
+    requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/api/test/stats.html"`)
+    res.send("There's nothing here")
 })
 
-try {
-    app.listen(MAIN_PORT, () => {
-        console.log(`App is listening on main port ${MAIN_PORT}`);
-    })
-} catch (e) {
-    errorLogger.log(e as string);
-    app.listen(ALT_PORT, () => {
-        console.log(`App is listening on alternative port ${ALT_PORT}`);
-    })
-}
+app.listen(MAIN_PORT, async () => {
+    console.log(`App is listening on main port ${MAIN_PORT}`);
+}).on('error', (err) => {
+    errorLogger.log((err as unknown) as string)
+
+    if (err.message.includes("EADDRINUSE")) {
+        app.listen(ALT_PORT, () => {
+            console.log(`App is listening on alternative port ${ALT_PORT}`);
+        })
+    }
+
+})

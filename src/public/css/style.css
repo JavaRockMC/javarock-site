@@ -1,7 +1,31 @@
-.descriptioncontainer {
-    display: flex;
-    margin: 0 auto;
-    text-justify: center;
+/*
+    I don't care I'm not doing this I fucking hate CSS
+*/
+
+#server-description {
     text-align: center;
-    align-items: center;
+    margin-top: 200px;
+}
+
+#top-navbar {
+    display: inline;
+    background-color: black;
+}
+
+#top-navbar a {
+    float: left;
+    text-align: center;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: white;
+    text-decoration: none;
+}
+
+#github-logo {
+    display: block;
+    height: 25px;
+    width: 25px;
+    padding: 5px;
+    margin-left: 0px;
+    margin-bottom: 0px;
 }
