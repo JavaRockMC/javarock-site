@@ -13,3 +13,15 @@ export function getExtraPorts(args: string[]): string[] {
 
     return [];
 }
+
+export function sleep(ms: number): Promise<boolean> {
+    if (typeof ms !== "number") {
+        throw TypeError("Expected argument to be of type 'number'");
+    }
+
+    return new Promise(resolve => {
+        setTimeout(() => {
+            resolve(true)
+        }, ms)
+    })
+}
