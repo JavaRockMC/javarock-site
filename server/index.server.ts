@@ -1,12 +1,12 @@
 import express from 'express';
 import path from 'path';
-import Logger from './utils/logger';
-import { nanoid } from 'nanoid';
+import Logger from './utils/logger.server';
+//import { nanoid } from 'nanoid';
 
 import {
     MAIN_PORT,
     ALT_PORT
-} from './constants'
+} from './constants.server'
 
 const app = express();
 const errorLogger = new Logger(path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false });

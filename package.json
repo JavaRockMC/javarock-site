@@ -19,6 +19,7 @@
   "homepage": "https://github.com/035WasTaken/javarock-site#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "got": "^11.8.2"
+    "got": "^11.8.2",
+    "nanoid": "^3.1.23"
   }
 }
