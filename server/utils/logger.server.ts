@@ -27,11 +27,11 @@ class Logger extends EventEmitter {
     // Maybe include logToConsole property in real implementation?
 
     //logToConsole;
-    maxConnected;
-    includeCurrentDate;
-    dateAsEpoch;
-    includeUniqueIdentifier;
-    uniqueIdentifierLength;
+    maxConnected: number;
+    includeCurrentDate: boolean;
+    dateAsEpoch: boolean;
+    includeUniqueIdentifier: boolean;
+    uniqueIdentifierLength: number;
 
     constructor(name: string, file: string, {
         //logToConsole = true,
@@ -305,6 +305,8 @@ class Logger extends EventEmitter {
         this._out = val;
     }
 }
+
+export default Logger;
 
 /*import fs from 'fs'
 import util from 'util';

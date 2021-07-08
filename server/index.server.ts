@@ -9,8 +9,8 @@ import {
 } from './constants.server'
 
 const app = express();
-const errorLogger = new Logger(path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false });
-const requestLogger = new Logger(path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false });
+const errorLogger = new Logger("Error Logger", path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
+const requestLogger = new Logger("Request Logger", path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
 
 app.use(express.static(path.join(__dirname, "..", "src", "public")));
 app.use(express.json());
