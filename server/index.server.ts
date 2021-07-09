@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import Logger from './utils/logger.server';
-//import { nanoid } from 'nanoid';
+import { nanoid } from 'nanoid';
 
 import {
     MAIN_PORT,
@@ -20,7 +20,11 @@ app.use(express.urlencoded({ extended: true }));
 
 app.get('/api/test/stats.html', (req, res) => {
     requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/api/test/stats.html"`)
-    res.send("There's nothing here")
+    res.send("Hello world")
+})
+
+app.get('/html/home.html', (req, res) => {
+    requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/html/home.html"`)
 })
 
 app.listen(MAIN_PORT, async () => {
