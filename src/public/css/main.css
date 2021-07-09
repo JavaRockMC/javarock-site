@@ -1,6 +1,48 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600&display=swap");
 body {
-  font-family: Roberto, sans-serif;
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+}
+
+body header {
+  width: 100%;
+  background-color: #2d3131;
+  padding: .5em;
+  padding-top: .5em;
+  border-bottom: .25em;
+  border-bottom-color: rosybrown;
+  border-bottom-style: solid;
+}
+
+body header img {
+  width: 4em;
+  height: 4em;
+  float: left;
+  padding-left: 0;
+  margin: 0;
+  border-radius: 3em;
+  border-color: rosybrown;
+  border-width: .2em;
+  border-style: solid;
+  -webkit-transition: ease-in 400ms;
+  transition: ease-in 400ms;
+}
+
+body header img:hover {
+  border-radius: 1.5em;
+  -webkit-transition: ease 750ms;
+  transition: ease 750ms;
+}
+
+body header img:active {
+  border-radius: 3em;
+  -webkit-transition: 100ms ease-in 0ms;
+  transition: 100ms ease-in 0ms;
+}
+
+body header nav {
+  float: right;
+  padding-right: 0.5em;
 }
 
 body header nav ul {
@@ -11,10 +53,51 @@ body header nav ul {
 }
 
 body header nav ul li {
-  padding-right: 1em;
+  padding-right: 1.2em;
+  padding-top: .25em;
+}
+
+body header nav ul li a {
+  text-decoration: none;
+  color: #02beca;
+  font-size: 1.7em;
+  position: relative;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+body header nav ul li a::before {
+  content: '';
+  height: 1.1em;
+  display: block;
+  width: 0px;
+  background-color: rgba(188, 143, 143, 0.623);
+  position: absolute;
+  bottom: -.05em;
+  left: -.1em;
+  -webkit-transition: all ease 750ms;
+  transition: all ease 750ms;
+}
+
+body header nav ul li a:hover::before {
+  width: 106%;
+}
+
+body main {
+  margin: 0.5em;
+}
+
+body footer {
+  margin: 0.5em;
 }
 
 body footer img {
   width: 2em;
+}
+
+.clearfix {
+  content: "";
+  display: table;
+  clear: both;
 }
 /*# sourceMappingURL=main.css.map */
