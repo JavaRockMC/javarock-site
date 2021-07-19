@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600&display=swap');
-$accent: #02beca;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700;800;900&display=swap");
+$accent: #a4d0d8;
 $rosybrown-transparant: rgba(188, 143, 143, 0.623);
 
 body {
@@ -8,59 +8,64 @@ body {
   header {
     width: 100%;
     background-color: #2d3131;
-    padding: .5em;
-    padding-top: .5em;
-    border-bottom: .25em;
+    padding-left: 0em;
+    padding-right: 0em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 0.25em;
     border-bottom-color: rosybrown;
     border-bottom-style: solid;
-    img {
+    div {
+      padding-left: 2em;
+      img {
         width: 4em;
         height: 4em;
         float: left;
         padding-left: 0;
         margin: 0;
-        border-radius: 3em;
+        border-radius: 2.2em;
         border-color: rosybrown;
-        border-width: .2em;
+        border-width: 0.2em;
         border-style: solid;
         transition: ease-in 400ms;
-
-    }
-    img:hover {
+      }
+      img:hover {
         border-radius: 1.5em;
         transition: ease 750ms;
-    }
-    img:active {
+      }
+      img:active {
         border-radius: 3em;
         transition: 100ms ease-in 0ms;
+      }
     }
     nav {
       float: right;
-      padding-right: 0.5em;
       ul {
         display: flex;
         list-style: none;
+        padding-right: 2em;
         li {
-          padding-right: 1.2em;
-          padding-top: .25em;
+          padding-left: 1.2em;
+          padding-top: 0.25em;
           a {
             text-decoration: none;
             color: $accent;
+            text-decoration: none;
             font-size: 1.7em;
             position: relative;
-            font-family: 'Quicksand', sans-serif;
+            font-family: "Quicksand", sans-serif;
             font-weight: 700;
           }
           a::before {
-              content: '';
-              height: 1.1em;
-              display: block;
-              width: 0px;
-              background-color: $rosybrown-transparant;
-              position: absolute;
-              bottom: -.05em;
-              left: -.1em;
-              
+            content: "";
+            height: 1.1em;
+            display: block;
+            width: 0px;
+            background-color: $rosybrown-transparant;
+            position: absolute;
+            bottom: -0.05em;
+            left: -0.1em;
+
             transition: all ease 750ms;
           }
           a:hover::before {
@@ -71,10 +76,32 @@ body {
     }
   }
   main {
-    margin: 0.5em;
+    margin: 2em;
+    h1 {
+      text-align: center;
+      margin-bottom: 0;
+      padding-top: 10em;
+    }
+    h2.javarockDesc {
+      text-align: center;
+      margin-top: 0;
+      padding-bottom: 10em;
+      strong {
+        font-weight: normal;
+      }
+    }
   }
   footer {
-    margin: 0.5em;
+    margin: 2em;
+    display: inline-flex;
+    a.git-txt {
+      padding-left: 0.3em;
+      padding-top: 0.17em;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.3em;
+      color: black;
+    }
     img {
       width: 2em;
     }
