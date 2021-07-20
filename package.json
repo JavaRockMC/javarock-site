@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node /server/index.server.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +22,5 @@
     "express": "^4.17.1",
     "got": "^11.8.2",
     "nanoid": "^3.1.23"
-  },
-  "scripts": {
-    "start": "node /server/index.server.js"
   }
 }
