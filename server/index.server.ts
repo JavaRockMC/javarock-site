@@ -27,15 +27,17 @@ app.get('/html/home.html', (req, res) => {
     requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/html/home.html"`)
 })
 
-app.listen(MAIN_PORT, async () => {
-    console.log(`App is listening on main port ${MAIN_PORT}`);
+const PORT = process.env.PORT || MAIN_PORT;
+const PORT_ALT = process.env.PORT || ALT_PORT;
+app.listen(PORT, async () => {
+    console.log(`App is listening on main port ${PORT}`);
     portsUsed.push(MAIN_PORT)
 }).on('error', (err) => {
     errorLogger.log((err as unknown) as string);
 
     if (err.message.includes("EADDRINUSE") && !portsUsed.includes(ALT_PORT)) {
-        app.listen(ALT_PORT, () => {
-            console.log(`App is listening on alternative port ${ALT_PORT}`);
+        app.listen(PORT_ALT, () => {
+            console.log(`App is listening on alternative port ${PORT_ALT}`);
         })
 
         portsUsed.push(ALT_PORT);
