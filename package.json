@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node build/server/index.server.js",
-    "build": "npm install typescript && tsc",
+    "start": "node server/index.server.js",
+    "build": "tsc",
     "postinstall": "npm run build"
   },
   "repository": {
