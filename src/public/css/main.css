@@ -21,6 +21,8 @@ body header div {
 }
 
 body header div img {
+  -webkit-transition: ease 350ms;
+  transition: ease 350ms;
   width: 4em;
   height: 4em;
   float: left;
@@ -30,20 +32,18 @@ body header div img {
   border-color: rosybrown;
   border-width: 0.2em;
   border-style: solid;
-  -webkit-transition: ease-in 400ms;
-  transition: ease-in 400ms;
 }
 
 body header div img:hover {
-  border-radius: 1.5em;
-  -webkit-transition: ease 750ms;
-  transition: ease 750ms;
+  border-radius: 1.8em;
+  -webkit-transition: ease 350ms;
+  transition: ease 350ms;
 }
 
-body header div img:active {
-  border-radius: 3em;
-  -webkit-transition: 100ms ease-in 0ms;
-  transition: 100ms ease-in 0ms;
+body header div img:hover:active {
+  border-radius: 2.2em;
+  -webkit-transition: ease 350ms;
+  transition: ease 350ms;
 }
 
 body header nav {
@@ -134,5 +134,10 @@ body footer img {
   content: "";
   display: table;
   clear: both;
+}
+
+.preload {
+  -webkit-transition: none !important;
+  transition: none !important;
 }
 /*# sourceMappingURL=main.css.map */

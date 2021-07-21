@@ -18,6 +18,7 @@ body {
     div {
       padding-left: 2em;
       img {
+        transition: ease 350ms;
         width: 4em;
         height: 4em;
         float: left;
@@ -27,15 +28,14 @@ body {
         border-color: rosybrown;
         border-width: 0.2em;
         border-style: solid;
-        transition: ease-in 400ms;
-      }
-      img:hover {
-        border-radius: 1.5em;
-        transition: ease 750ms;
-      }
-      img:active {
-        border-radius: 3em;
-        transition: 100ms ease-in 0ms;
+        &:hover {
+          border-radius: 1.8em;
+          transition: ease 350ms;
+          &:active {
+            border-radius: 2.2em;
+            transition: ease 350ms;
+          }
+        }
       }
     }
     nav {
@@ -113,4 +113,9 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+
+.preload {
+  //removes animation from navbar image while page is loading
+  transition: none !important;
 }

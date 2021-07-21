@@ -18,6 +18,10 @@ app.use(express.static(path.join(__dirname, "..", "src", "public")));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../src/public/html/index.html'))
+})
+
 app.get('/api/test/stats.html', (req, res) => {
     requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/api/test/stats.html"`)
     res.send("Hello world")
