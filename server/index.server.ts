@@ -8,6 +8,7 @@ import {
     ALT_PORT
 } from './constants.server'
 
+// refactoring 
 const app = express();
 const errorLogger = new Logger("Error Logger", path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
 const requestLogger = new Logger("Request Logger", path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
