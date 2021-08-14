@@ -1,4 +1,6 @@
-import EventEmitter from 'events';
+// @ts-nocheck
+
+import { EventEmitter } from 'events';
 import * as stream from 'stream';
 import * as util from 'util'
 import * as fs from 'fs';
@@ -24,7 +26,6 @@ class Logger extends EventEmitter {
     _out?: stream.Writable;
 
     // Optional constructor arguments
-    // Maybe include logToConsole property in real implementation?
 
     //logToConsole;
     maxConnected: number;

@@ -10,8 +10,6 @@ import {
 
 // refactoring 
 const app = express();
-const errorLogger = new Logger("Error Logger", path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
-const requestLogger = new Logger("Request Logger", path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
 
 let portsUsed: number[] = [];
 
@@ -24,21 +22,16 @@ app.get('/', (req, res) => {
 })
 
 app.get('/api/test/stats.html', (req, res) => {
-    requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/api/test/stats.html"`)
     res.send("Hello world")
-})
-
-app.get('/html/home.html', (req, res) => {
-    requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/html/home.html"`)
 })
 
 const PORT = process.env.PORT || MAIN_PORT;
 const PORT_ALT = process.env.PORT || ALT_PORT;
+
 app.listen(PORT, async () => {
     console.log(`App is listening on main port ${PORT}`);
     portsUsed.push(MAIN_PORT)
 }).on('error', (err) => {
-    errorLogger.log((err as unknown) as string);
 
     if (err.message.includes("EADDRINUSE") && !portsUsed.includes(ALT_PORT)) {
         app.listen(PORT_ALT, () => {
@@ -47,7 +40,7 @@ app.listen(PORT, async () => {
 
         portsUsed.push(ALT_PORT);
     } else {
-        console.log("Cannot listen on normal ports, falling back to final ports.")
+        console.log("All ports are currently occupied.")
     }
 
 })
