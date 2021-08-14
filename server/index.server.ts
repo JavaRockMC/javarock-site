@@ -10,6 +10,8 @@ import {
 
 // refactoring 
 const app = express();
+const errorLogger = new Logger("Error Logger", path.join(__dirname, ".", "logs", "errors.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
+const requestLogger = new Logger("Request Logger", path.join(__dirname, ".", "logs", "requests.log"), { dateAsEpoch: false, includeUniqueIdentifier: true });
 
 let portsUsed: number[] = [];
 
@@ -18,10 +20,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get('/', (req, res) => {
+
     res.sendFile(path.join(__dirname, '../src/public/html/index.html'))
 })
 
 app.get('/api/test/stats.html', (req, res) => {
+    requestLogger.log(`GET request received from ${req.socket.remoteAddress} | Location: "/api/test/stats.html"`)
     res.send("Hello world")
 })
 
@@ -32,6 +36,7 @@ app.listen(PORT, async () => {
     console.log(`App is listening on main port ${PORT}`);
     portsUsed.push(MAIN_PORT)
 }).on('error', (err) => {
+    errorLogger.log((err as unknown) as string);
 
     if (err.message.includes("EADDRINUSE") && !portsUsed.includes(ALT_PORT)) {
         app.listen(PORT_ALT, () => {
