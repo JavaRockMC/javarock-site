@@ -13,6 +13,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.get("/api/test/stats.html", (req, res) => {
+    res.status(404).send("404 not found")
+})
+
 // for some ungodly reason this has to be after i've handled requests
 app.use(express.static(path.join(__dirname, "..", "src", "public")));
 
