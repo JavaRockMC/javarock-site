@@ -116,6 +116,6 @@ body {
 }
 
 .preload {
-  //removes animation from navbar image while page is loading
+  //removes animation from navbar image while page is loading, re-added in javascript after page is loaded, fixes some animations (by some i mean when the page loads the IMAGE HAD A HEART ATTACK THIS TOOK ME DAYS TO FIGURE OUT)
   transition: none !important;
 }
