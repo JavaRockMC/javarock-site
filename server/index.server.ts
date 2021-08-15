@@ -4,18 +4,25 @@ import { nanoid } from 'nanoid';
 
 import {
     MAIN_PORT,
-    ALT_PORT
+    ALT_PORT,
+    PATH
 } from './constants.server'
 
 // todo
 const app = express();
 
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/test/stats.html", (req, res) => {
+app.get("/api/test/stats", (req, res) => {
     res.status(404).send("404 not found")
 })
+
+app.get("/", (req, res) => {
+    res.sendFile(`${PATH}/html/index.html`)
+})
+
 
 // for some ungodly reason this has to be after i've handled requests
 app.use(express.static(path.join(__dirname, "..", "src", "public")));
