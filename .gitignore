@@ -2,7 +2,10 @@
 /node_modules
 vscode*
 
-*.js
+/server/*.js
+/server/utils/*.js
+/server/tests/*.js
+
 *.log
 
 !.gitignore
