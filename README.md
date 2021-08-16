@@ -1,5 +1,5 @@
 # JavaRock Site
-This is the source code for the JavaRock website, by @035WasTaken, @DUDEbehindDUDE, and @WSCKR. If you wish to (for some reason) run the site locally you simply have to run the .bat in ~/server (make sure you have node and the typescript package!) and it should launch the site at http://localhost:port, where port is the port that console gives you. This site currently utilizes typescript, javascript, sass, and html.
+This is the source code for the JavaRock website, by @035WasTaken, @DUDEbehindDUDE, and @WSCKR (now with more @tjreigh). If you wish to (for some reason) run the site locally you simply have to run the .bat in ~/server (make sure you have node and the typescript package!) and it should launch the site at http://localhost:port, where port is the port that console gives you. This site currently utilizes typescript, javascript, sass, and html.
 
 start.bat no longer exists.
 

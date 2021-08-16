@@ -8,7 +8,8 @@ import {
     PATH
 } from './constants.server'
 
-// todo
+// todo: refactor
+// can use arguments w express urls to shorten this
 const app = express();
 
 app.use(express.json());
@@ -19,12 +20,15 @@ app.get("/api/test/stats", (req, res) => {
 })
 
 app.get("/api/preview/home", (req, res) => {
-    console.log("MMMM")
-    res.send("Working!")
+    res.send({data: "string"})
 })
 
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
+})
+
+app.post("/api/preview/home", (req, res) => {
+    console.log(req.body)
 })
 
 // for some ungodly reason this has to be after i've handled requests

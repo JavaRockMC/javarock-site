@@ -12,7 +12,7 @@ const finished = util.promisify(stream.finished);
 
 class Logger extends EventEmitter {
     // Required constructor argument
-    name;
+    name: string;
 
     // Arrays used in class methods
     connected: any[] = [];
