@@ -1,0 +1,7 @@
+{
+    "watch": ["./*"],
+    "ext": "ts,js,json",
+    "ignore": ["/server/*.js", "/server/tests", "/server/utils/*.js"],
+    "delay":"2",
+    "exec": "tsc & node server/index.server.js"
+}

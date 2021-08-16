@@ -11,7 +11,6 @@ import {
 // todo
 const app = express();
 
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -19,10 +18,14 @@ app.get("/api/test/stats", (req, res) => {
     res.status(404).send("404 not found")
 })
 
+app.get("/api/preview/home", (req, res) => {
+    console.log("MMMM")
+    res.send("Working!")
+})
+
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
 })
-
 
 // for some ungodly reason this has to be after i've handled requests
 app.use(express.static(path.join(__dirname, "..", "src", "public")));
