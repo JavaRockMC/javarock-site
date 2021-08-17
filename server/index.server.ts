@@ -28,11 +28,12 @@ app.get("/", (req, res) => {
 })
 
 app.post("/api/preview/home", (req, res) => {
-    console.log(req.body)
+    const body = req.body;
+    console.log(body)
 })
 
 // for some ungodly reason this has to be after i've handled requests
-app.use(express.static(path.join(__dirname, "..", "src", "public")));
+app.use(express.static(path.join(PATH)));
 
 const PORT = process.env.PORT || MAIN_PORT;
 const PORT_ALT = process.env.PORT || ALT_PORT;
