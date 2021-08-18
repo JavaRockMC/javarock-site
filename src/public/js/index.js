@@ -2,7 +2,7 @@ const xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("
 const stats = document.getElementsByClassName("stats");
 xhttp.addEventListener("load", function(resp) {
     console.log("Complete")
-    statsp
+    stats
 })
 
 window.onload = function() {
