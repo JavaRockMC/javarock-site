@@ -32,6 +32,15 @@ app.post("/api/preview/home", (req, res) => {
     console.log(body)
 })
 
+app.post("/api/messages/:id", (req, res) => {
+    const id = req.params;
+    if(!Number.parseInt(id)) {
+        return res.status(403).send("Invalid ID");
+    }
+
+    //around here we'd verify that everything is fine
+})
+
 // for some ungodly reason this has to be after i've handled requests
 app.use(express.static(path.join(PATH)));
 
