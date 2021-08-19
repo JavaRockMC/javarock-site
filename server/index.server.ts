@@ -21,10 +21,16 @@ app.get("/api/preview/home", (req, res) => {
 })
 
 app.get("/api/messages/:id", (req, res) => {
-    const id = req.params.id
-    if (+id === 0) {
+    const id = +req.params.id
+    const headers = req.headers
+    const authHeader = headers.authorization;
+    if (id === 0) {
         // NOT permanent, only to be used while testing on localhost
         return res.status(200).json({ id: nanoid(8) })
+    }
+
+    if (id === 1) {
+        if (authHeader) { }
     }
 })
 

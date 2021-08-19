@@ -17,5 +17,5 @@ submitButton.onclick = function() {
 
 xhttp.addEventListener("load", (response) => {
     const responseText = xhttp.responseText
-    alert(responseText)
+    
 })
