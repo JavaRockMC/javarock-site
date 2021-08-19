@@ -1,3 +1,4 @@
+// doesn't execute for some reason????
 alert("contact.js")
 const xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
 
