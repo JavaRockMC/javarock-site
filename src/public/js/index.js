@@ -1,3 +1,4 @@
+alert("jjjjj")
 const xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
 const stats = document.getElementsByClassName("stats");
 xhttp.addEventListener("load", function(resp) {
