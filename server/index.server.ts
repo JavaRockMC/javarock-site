@@ -15,20 +15,16 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/test/stats", (req, res) => {
-    res.status(404).send("404 not found")
-})
-
 app.get("/api/preview/home", (req, res) => {
     console.log('mmmm')
-    res.send({data: "string"})
+    res.send({ data: "string" })
 })
 
 app.get("/api/messages/:id", (req, res) => {
     const id = req.params.id
-    if(+id === 0) {
+    if (+id === 0) {
         // NOT permanent, only to be used while testing on localhost
-        return res.json({id: nanoid(8)})
+        return res.status(200).json({ id: nanoid(8) })
     }
 })
 

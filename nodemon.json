@@ -1,6 +1,6 @@
 {
     "watch": ["./**"],
-    "ext": "ts,js,json",
+    "ext": "ts,js,json,html,css",
     "ignore": ["/server/*.js", "/server/tests", "/server/utils/*.js"],
     "exec": "tsc & node server/index.server.js"
 }
