@@ -1,10 +1,8 @@
-// doesn't execute for some reason????
-alert("contact.js")
 const xhttp = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP")
 
 xhttp.addEventListener("load", (response) => {
-    const response = xhttp.responseText
-    alert(response)
+    const responseText = xhttp.responseText
+    alert(responseText)
 })
 
 let id = null;
@@ -13,7 +11,7 @@ const textBox = document.getElementById("textbox");
 const submitButton = document.querySelector("button");
 
 textBox.addEventListener("input", (value) => {
-    if(value.length < 1) {
+    if(!value) {
         return submitButton.disabled = true;
     }
 
