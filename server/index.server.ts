@@ -33,7 +33,7 @@ app.post("/api/preview/home", (req, res) => {
 })
 
 app.post("/api/messages/:id", (req, res) => {
-    const id = req.params;
+    const id = req.params.id;
     if(!Number.parseInt(id)) {
         return res.status(403).send("Invalid ID");
     }
