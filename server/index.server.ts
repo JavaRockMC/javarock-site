@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { nanoid } from 'nanoid';
+import * as types from './types/types'
 
 import {
     MAIN_PORT,
