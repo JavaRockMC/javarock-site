@@ -1,7 +1,7 @@
 import express from 'express';
 import path from 'path';
 import { nanoid } from 'nanoid';
-import * as types from './types/types'
+import { PlayerStats, WorldStats } from './types/APITypes';
 
 import {
     MAIN_PORT,
