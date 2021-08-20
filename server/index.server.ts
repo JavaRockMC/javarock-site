@@ -68,8 +68,6 @@ app.listen(PORT, async () => {
         app.listen(PORT_ALT, () => {
             console.log(`App is listening on alternative port ${PORT_ALT}`);
         })
-    } else {
-        console.log("All ports are currently occupied.")
     }
 
 })
