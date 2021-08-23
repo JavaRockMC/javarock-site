@@ -11,7 +11,7 @@ textBox.addEventListener("input", (value) => {
 
 submitButton.onclick = function() {
     // this won't be permanent, just using it to test
-    xhttp.open("GET", "/api/messages/");
+    xhttp.open("GET", "/api/messages/0");
     xhttp.send();
 }
 

@@ -2,9 +2,7 @@
 /node_modules
 vscode*
 
-/server/*.js
-/server/utils/*.js
-/server/tests/*.js
+/server/**/*.js
 
 *.log
 /.replit

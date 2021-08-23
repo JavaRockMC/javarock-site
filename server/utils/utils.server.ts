@@ -1,9 +1,9 @@
-import * as types from '../types/types';
+import { matchResults } from "../types/utilTypes"
 
 export function getExtraPorts(args: string[]): string[] {
     const separator = "@@@@@"
     const joined: string = args.join(separator) || "";
-    const matched: types.matchResults = joined.match(/(-P).*/);
+    const matched: matchResults = joined.match(/(-P).*/);
     const ports = matched ? matched[0] : null;
 
     if (ports) {

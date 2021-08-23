@@ -1,5 +1,6 @@
 import express from 'express';
 import path from 'path';
+import glob from 'glob';
 import { nanoid } from 'nanoid';
 import { PlayerStats, WorldStats } from './types/APITypes';
 
@@ -16,43 +17,9 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/preview/home", (req, res) => {
-    console.log('mmmm')
-    res.send({ data: "string" })
-})
-
-app.get("/api/messages/:id", (req, res) => {
-    const id = +req.params.id
-    const headers = req.headers
-    const authHeader = headers.authorization;
-    if (id === 0) {
-        // NOT permanent, only to be used while testing on localhost
-        return res.status(200).json({ id: nanoid(8) })
-    }
-
-    if (id === 1) {
-        if (authHeader) { }
-    }
-})
-
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
 })
-
-app.post("/api/preview/home", (req, res) => {
-    const body = req.body;
-    console.log(body)
-})
-
-/*app.post("/api/messages/:id", (req, res) => {
-    const id = req.params.id;
-
-    if(!Number.parseInt(id)) {
-        return res.status(403).send("Invalid ID");
-    }
-
-    //around here we'd verify that everything is fine
-})*/
 
 // for some ungodly reason this has to be after i've handled requests
 app.use(express.static(path.join(PATH)));
@@ -71,3 +38,34 @@ app.listen(PORT, async () => {
     }
 
 })
+
+
+/*app.get("/api/preview/home", (req, res) => {
+    console.log('mmmm')
+    res.send({ data: "string" })
+})
+
+app.get("/api/messages/:id", (req, res) => {
+    const id = +req.params.id
+    const headers = req.headers
+    const authHeader = headers.authorization;
+    if (id === 0) {
+        // NOT permanent, only to be used while testing on localhost
+        return res.status(200).json({ id: nanoid(8) })
+    }
+
+    if (id === 1) {
+        if (authHeader) { }
+    }
+})
+
+app.get("/api/players/:username", (req, res) => {
+    if (!req.headers.authorization) {
+        return res.redirect(`/stats/players/${req.params.username}`)
+    }
+})
+
+app.post("/api/preview/home", (req, res) => {
+    const body = req.body;
+    console.log(body)
+})*/
