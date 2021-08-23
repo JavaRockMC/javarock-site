@@ -4,6 +4,9 @@ import glob from 'glob';
 import { nanoid } from 'nanoid';
 import { PlayerStats, WorldStats } from './types/APITypes';
 
+import playerIndex from './routes/api/players/index';
+import statsIndex from './routes/api/stats/index';
+
 import {
     MAIN_PORT,
     ALT_PORT,
@@ -16,6 +19,9 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.use("/api/players", playerIndex);
+app.use("/api/stats", statsIndex);
 
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
