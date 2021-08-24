@@ -4,6 +4,8 @@ import glob from 'glob';
 import { nanoid } from 'nanoid';
 import { PlayerStats, WorldStats } from './types/APITypes';
 
+// these imports suck, but i can't do anything about them right now
+import worldIndex from './routes/api/world/index';
 import playerIndex from './routes/api/players/index';
 import statsIndex from './routes/api/stats/index';
 
@@ -20,8 +22,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use("/api/players", playerIndex);
+// i'm not sure this can be avoided
 app.use("/api/stats", statsIndex);
+app.use("/api/world", worldIndex);
+app.use("/api/players", playerIndex);
 
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)

@@ -9,6 +9,6 @@ xhttp.addEventListener("load", function(resp) {
 })
 
 window.onload = function() {
-    xhttp.open("GET", "/api/preview/home");
+    xhttp.open("GET", "/api/stats");
     xhttp.send();
 }
