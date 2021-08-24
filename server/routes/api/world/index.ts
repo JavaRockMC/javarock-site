@@ -13,7 +13,7 @@ router.get("/seed/:season", (req, res) => {
 })
 
 router.get("/stats/:category", (req, res) => {
-    return res.send("No stats. Chosen category: " + req.params.season)
+    return res.send("No stats. Chosen category: " + JSON.stringify(req.params))
 })
 
 
