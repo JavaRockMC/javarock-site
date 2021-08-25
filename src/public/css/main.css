@@ -94,6 +94,16 @@ body main {
   margin: 2em;
 }
 
+body main div.disclaimer {
+  background-color: orange;
+  width: 100%;
+  height: auto;
+}
+
+body main div.disclaimer p {
+  font-weight: bold;
+}
+
 body main h1 {
   text-align: center;
   margin-bottom: 0;

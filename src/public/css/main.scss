@@ -77,6 +77,14 @@ body {
   }
   main {
     margin: 2em;
+    div.disclaimer {
+      background-color: orange;
+      width: 100%;
+      height: auto;
+      p {
+        font-weight: bold;
+      }
+    }
     h1 {
       text-align: center;
       margin-bottom: 0;
