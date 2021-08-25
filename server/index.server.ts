@@ -1,6 +1,13 @@
 import express from 'express';
 import path from 'path';
+import glob from 'glob';
 import { nanoid } from 'nanoid';
+import { PlayerStats, WorldStats } from './types/APITypes';
+
+// these imports suck, but i can't do anything about them right now
+import worldIndex from './routes/api/world/index';
+import playerIndex from './routes/api/players/index';
+import statsIndex from './routes/api/stats/index';
 
 import {
     MAIN_PORT,
@@ -15,30 +22,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get("/api/test/stats", (req, res) => {
-    res.status(404).send("404 not found")
-})
-
-app.get("/api/preview/home", (req, res) => {
-    res.send({data: "string"})
-})
+// i'm not sure this can be avoided
+app.use("/api/stats", statsIndex);
+app.use("/api/world", worldIndex);
+app.use("/api/players", playerIndex);
 
 app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
-})
-
-app.post("/api/preview/home", (req, res) => {
-    const body = req.body;
-    console.log(body)
-})
-
-app.post("/api/messages/:id", (req, res) => {
-    const id = req.params.id;
-    if(!Number.parseInt(id)) {
-        return res.status(403).send("Invalid ID");
-    }
-
-    //around here we'd verify that everything is fine
 })
 
 // for some ungodly reason this has to be after i've handled requests
@@ -55,8 +45,37 @@ app.listen(PORT, async () => {
         app.listen(PORT_ALT, () => {
             console.log(`App is listening on alternative port ${PORT_ALT}`);
         })
-    } else {
-        console.log("All ports are currently occupied.")
     }
 
 })
+
+
+/*app.get("/api/preview/home", (req, res) => {
+    console.log('mmmm')
+    res.send({ data: "string" })
+})
+
+app.get("/api/messages/:id", (req, res) => {
+    const id = +req.params.id
+    const headers = req.headers
+    const authHeader = headers.authorization;
+    if (id === 0) {
+        // NOT permanent, only to be used while testing on localhost
+        return res.status(200).json({ id: nanoid(8) })
+    }
+
+    if (id === 1) {
+        if (authHeader) { }
+    }
+})
+
+app.get("/api/players/:username", (req, res) => {
+    if (!req.headers.authorization) {
+        return res.redirect(`/stats/players/${req.params.username}`)
+    }
+})
+
+app.post("/api/preview/home", (req, res) => {
+    const body = req.body;
+    console.log(body)
+})*/
