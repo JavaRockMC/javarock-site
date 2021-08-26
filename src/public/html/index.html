@@ -16,13 +16,14 @@
   <body>
     <header class="clearfix">
       <div>
-        <a class="img" href="/"
-          ><img
+        <a class="img" href="/"></a>
+          <img
             class="preload"
             id="navimg"
             src="/images/javarock-small.png"
             alt="JavaRock Logo"
-        /></a>
+          />
+        </a>
         <script src="/js/preload.js"></script>
         <!--Makes transitions not load until the page is done loading-->
       </div>
@@ -38,12 +39,17 @@
     </header>
     <main>
       <div class="disclaimer">
-        <p>Disclamer: this website is still under development, and parts of it may change entirely and/or may not work.</p>
+        <p>
+          Disclamer: this website is still under development, and parts of it
+          may change entirely and/or may not work.
+        </p>
       </div>
       <h1>JavaRock</h1>
       <h2 class="javarockDesc">
         An SMP that has crossplay with the Bedrock and Java Editions of
-        Minecraft<br /><strong>there will be an image behind this!</strong>
+        Minecraft
+        <br />
+        <strong>there will be an image behind this!</strong>
       </h2>
       <p></p>
       <h2 id="about">About JavaRock</h2>
@@ -56,88 +62,108 @@
       <p>The server runs on Fabric 1.17.1, and the current plugins are:</p>
       <ul>
         <li>
-          <a href="https://geysermc.org/" target="_blank"
-            >GeyserMC - <em>crossplay</em></a
-          >
+          <a href="https://geysermc.org/" target="_blank">
+            GeyserMC -
+            <em>crossplay</em>
+          </a>
         </li>
         <li>
-          <a href="https://geysermc.org/" target="_blank"
-            >Floodgate - <em>crossplay</em></a
-          >
+          <a href="https://geysermc.org/" target="_blank">
+            Floodgate -
+            <em>crossplay</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/cave-biomes"
             target="_blank"
-            >Cave Biomes - <em>terrain</em></a
           >
+            Cave Biomes -
+            <em>terrain</em>
+          </a>
         </li>
         <li>
-          <a href="https://modrinth.com/mod/crowmap" target="_blank"
-            >Crowmap - <em>utility</em></a
-          >
+          <a href="https://modrinth.com/mod/crowmap" target="_blank">
+            Crowmap -
+            <em>utility</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/simplerharvest"
             target="_blank"
-            >Simpler Harvest - <em>utility</em></a
           >
+            Simpler Harvest -
+            <em>utility</em>
+          </a>
         </li>
         <li>
-          <a href="https://modrinth.com/mod/keepheadnames" target="_blank"
-            >Keep Head Names - <em>utility</em></a
-          >
+          <a href="https://modrinth.com/mod/keepheadnames" target="_blank">
+            Keep Head Names -
+            <em>utility</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric"
             target="_blank"
-            >Mini MOTD - utility</a
           >
+            Mini MOTD - utility
+          </a>
         </li>
         <li>
-          <a href="https://github.com/Haven-King/SAX/tree/1.1" target="_blank"
-            >SAX (1.17 branch) - <em>utility</em></a
-          >
+          <a href="https://github.com/Haven-King/SAX/tree/1.1" target="_blank">
+            SAX (1.17 branch) -
+            <em>utility</em>
+          </a>
         </li>
         <li>
-          <a href="https://modrinth.com/mod/styledplayerlist" target="_blank"
-            >Styled Player List - <em>utility</em></a
-          >
+          <a href="https://modrinth.com/mod/styledplayerlist" target="_blank">
+            Styled Player List -
+            <em>utility</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/lithium"
             target="_blank"
-            >Lithium - <em>performance</em></a
           >
+            Lithium -
+            <em>performance</em>
+          </a>
         </li>
         <li>
-          <a href="https://github.com/Tuinity/Starlight" target="_blank"
-            >Starlight - <em>performance</em></a
-          >
+          <a href="https://github.com/Tuinity/Starlight" target="_blank">
+            Starlight -
+            <em>performance</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs"
             target="_blank"
-            >Fat Experiance Orbs - <em>performance</em></a
           >
+            Fat Experiance Orbs -
+            <em>performance</em>
+          </a>
         </li>
         <li>
           <a
             href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric"
             target="_blank"
-            >Fast Furnace - <em>performance</em></a
           >
+            Fast Furnace -
+            <em>performance</em>
+          </a>
         </li>
         <li>
           <a
             href="https://modrinth.com/mod/worldspecificviewdistance"
             target="_blank"
-            >World Specific View Distance - <em>performance</em></a
           >
+            World Specific View Distance -
+            <em>performance</em>
+          </a>
         </li>
       </ul>
       <p>Also, the changed gamerules are:</p>
@@ -174,37 +200,64 @@
       <p>Here is what the members of the server have accomplished so far:</p>
       <ul>
         <!--there are classes for each statistic to use in backend (what's in the em tags)-->
-        <li>Blocks Mined: <em id="blocksMined" class="stats">...</em></li>
-        <li>Blocks Placed: <em id="blocksPlaced" class="stats">...</em></li>
-        <li>Mobs Killed: <em id="mobsKilled" class="stats">...</em></li>
-        <li>Deaths: <em id="totalDeaths" class="stats">...</em></li>
-        <li>Times Slept: <em id="timesDlept" class="stats">...</em></li>
-        <li>Distance Travelled: <em id="distanceTravelled" class="stats">... km</em></li>
-        <li>Time Played: <em id="totalTimePlayed" class="stats">... hrs</em></li>
-        <li>Current Uptime: <em id="currentUptime" class="stats">... hrs</em></li>
-        <li>World Time (in minecraft days): <em id="worldTime" class="stats">Day ...</em></li>
+        <li>
+          Blocks Mined:
+          <em id="blocksMined" class="stats">...</em>
+        </li>
+        <li>
+          Blocks Placed:
+          <em id="blocksPlaced" class="stats">...</em>
+        </li>
+        <li>
+          Mobs Killed:
+          <em id="mobsKilled" class="stats">...</em>
+        </li>
+        <li>
+          Deaths:
+          <em id="totalDeaths" class="stats">...</em>
+        </li>
+        <li>
+          Times Slept:
+          <em id="timesDlept" class="stats">...</em>
+        </li>
+        <li>
+          Distance Travelled:
+          <em id="distanceTravelled" class="stats">... km</em>
+        </li>
+        <li>
+          Time Played:
+          <em id="totalTimePlayed" class="stats">... hrs</em>
+        </li>
+        <li>
+          Current Uptime:
+          <em id="currentUptime" class="stats">... hrs</em>
+        </li>
+        <li>
+          World Time (in minecraft days):
+          <em id="worldTime" class="stats">Day ...</em>
+        </li>
       </ul>
       <h2 id="discord">Discord</h2>
       <p>
         To join JavaRock, you need to be in our discord server as this allows me
-        to moderate the server more easily. To join the server, ask someone
-        that's already in the server or DM one of our moderators
-        (DUDEbehindDUDE2020#6666, Kai 💜#9472, or Whisker#6666) for an invite.
-        This is to moderate people that join the server.
-        <br>
-        <br>
-        <strong>Any information here will be updated to the best of our abilties when/if it changes, 
-          but we cannot guarantee it will always be 100% accurate.
-        </strong>
+        to moderate the server more easily. To join the server, ask someone you
+        know that's already in the server or visit the
+        <a href="/html/contact.html">Contact Us</a>
+        page.
+      </p>
+      <p>
+        Any information here will be updated to the best of our abilties when/if
+        it changes, but we cannot guarantee it will always be 100% accurate.
       </p>
       <script src="/js/index.js"></script>
     </main>
     <footer>
-      <a class="git-img" href="https://github.com/035WasTaken/javarock-site"
-        ><img src="../images/github-transparent.png" alt=" " /></a
-      ><a class="git-txt" href="https://github.com/035WasTaken/javarock-site"
-        >Github</a
-      >
+      <a class="git-img" href="https://github.com/035WasTaken/javarock-site">
+        <img src="../images/github-transparent.png" alt=" " />
+      </a>
+      <a class="git-txt" href="https://github.com/035WasTaken/javarock-site">
+        Github
+      </a>
     </footer>
   </body>
 </html>
