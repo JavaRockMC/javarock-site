@@ -106,8 +106,8 @@ body main div.disclaimer p {
 
 body main div.section {
   border-width: 8px;
-  border-style: outset;
-  border-radius: .7em;
+  border-style: solid;
+  border-radius: .1em;
   background-color: #eff5f5;
   border-color: #000000;
   padding: .35em;
