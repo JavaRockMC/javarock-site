@@ -7,7 +7,11 @@ router.get("/", (req, res) => {
 })
 
 router.get("/:player", (req, res) => {
-    res.send("the cum sexer...")
+    res.send("the cum sexer...");
+})
+
+router.get("/:player/stats", (req, res) => {
+    res.send("Basic stat overview");
 })
 
 router.get("/:player/stats/:category", (req, res) => {

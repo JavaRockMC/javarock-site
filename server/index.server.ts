@@ -31,12 +31,17 @@ app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
 })
 
-// for some ungodly reason this has to be after i've handled requests
+app.get("/home", (req, res) => {
+    res.redirect("/");
+})
+
 app.use(express.static(path.join(PATH)));
 
+// something something, heroku
 const PORT = process.env.PORT || MAIN_PORT;
 const PORT_ALT = process.env.PORT || ALT_PORT;
 
+// i WANT to improve this, but i simply refuse to put the time needed into doing so
 app.listen(PORT, async () => {
     console.log(`App is listening on main port ${PORT}`);
 }).on('error', (err) => {
@@ -48,34 +53,3 @@ app.listen(PORT, async () => {
     }
 
 })
-
-
-/*app.get("/api/preview/home", (req, res) => {
-    console.log('mmmm')
-    res.send({ data: "string" })
-})
-
-app.get("/api/messages/:id", (req, res) => {
-    const id = +req.params.id
-    const headers = req.headers
-    const authHeader = headers.authorization;
-    if (id === 0) {
-        // NOT permanent, only to be used while testing on localhost
-        return res.status(200).json({ id: nanoid(8) })
-    }
-
-    if (id === 1) {
-        if (authHeader) { }
-    }
-})
-
-app.get("/api/players/:username", (req, res) => {
-    if (!req.headers.authorization) {
-        return res.redirect(`/stats/players/${req.params.username}`)
-    }
-})
-
-app.post("/api/preview/home", (req, res) => {
-    const body = req.body;
-    console.log(body)
-})*/

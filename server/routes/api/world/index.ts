@@ -1,4 +1,5 @@
 import express from 'express';
+import { categories } from '../categories';
 
 const router = express.Router();
 
@@ -13,6 +14,7 @@ router.get("/seed/:season", (req, res) => {
 })
 
 router.get("/stats/:category", (req, res) => {
+    const category = req.params.category;
     return res.send("No stats. Chosen category: " + JSON.stringify(req.params))
 })
 

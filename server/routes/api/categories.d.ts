@@ -1,6 +1,6 @@
-export type category = "blocks" | "mobs" | "time" |"misc"
+export type categories = "blocks" | "mobs" | "time" | "misc"
 
-export interface Categories {
+export interface Category {
     Blocks: Blocks;
     Mobs: Mobs;
     Time: Time;
