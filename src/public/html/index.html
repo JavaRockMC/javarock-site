@@ -51,207 +51,219 @@
         <br />
         <strong>there will be an image behind this!</strong>
       </h2>
-      <p></p>
-      <h2 id="about">About JavaRock</h2>
-      <p>
-        JavaRock was started because I believe that Java Edition is superior,
-        yet many of my friends only can play on Bedrock. I found a plugin called
-        GeyserMC, and it allows for crossplay between the two editions (with the
-        server running on Java).
-      </p>
-      <p>The server runs on Fabric 1.17.1, and the current plugins are:</p>
-      <ul>
-        <li>
-          <a href="https://geysermc.org/" target="_blank">
-            GeyserMC -
-            <em>crossplay</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://geysermc.org/" target="_blank">
-            Floodgate -
-            <em>crossplay</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/cave-biomes"
-            target="_blank"
-          >
-            Cave Biomes -
-            <em>terrain</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://modrinth.com/mod/crowmap" target="_blank">
-            Crowmap -
-            <em>utility</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/simplerharvest"
-            target="_blank"
-          >
-            Simpler Harvest -
-            <em>utility</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://modrinth.com/mod/keepheadnames" target="_blank">
-            Keep Head Names -
-            <em>utility</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric"
-            target="_blank"
-          >
-            Mini MOTD - utility
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Haven-King/SAX/tree/1.1" target="_blank">
-            SAX (1.17 branch) -
-            <em>utility</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://modrinth.com/mod/styledplayerlist" target="_blank">
-            Styled Player List -
-            <em>utility</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/lithium"
-            target="_blank"
-          >
-            Lithium -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/Tuinity/Starlight" target="_blank">
-            Starlight -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs"
-            target="_blank"
-          >
-            Fat Experiance Orbs -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric"
-            target="_blank"
-          >
-            Fast Furnace -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://modrinth.com/mod/worldspecificviewdistance"
-            target="_blank"
-          >
-            World Specific View Distance -
-            <em>performance</em>
-          </a>
-        </li>
-      </ul>
-      <p>Also, the changed gamerules are:</p>
-      <ul>
-        <li>PlayersSleepingPercentage: 25% (yeah thats it lol)</li>
-      </ul>
-      <p>
-        Bedrock and Java Edition crossplay isn't perfect however, so there are a
-        few downsides to playing the server on Bedrock as opposed to Java (which
-        is why if you have the option you should play on Java as these issues
-        don't exist there):
-      </p>
-      <ul>
-        <li>
-          On mobile, buckets only place in the middle of the screen as the Java
-          Edition packet doesn't specify where the block is placed
-        </li>
-        <li>
-          Bedrock players may occasionally experiance rubberbanding when going
-          over slabs, stairs, etc. as Bedrock treats their hitboxes differently
-        </li>
-        <li>
-          Bedrock players can't easily put things other than shields, totems,
-          and arrows into their offhands as this is a client-side limitation.
-          You can emote to swap your main hand and offhand, but you can't use
-          your offhand items unless you can on Bedrock.
-        </li>
-        <li>
-          The glowing effect doesn't work and the spectral arrow texture is just
-          a normal arrow as they don't exist in Bedrock
-        </li>
-      </ul>
-      <h2 id="statistics">Server Statistics</h2>
-      <p>Here is what the members of the server have accomplished so far:</p>
-      <ul>
-        <!--there are classes for each statistic to use in backend (what's in the em tags)-->
-        <li>
-          Blocks Mined:
-          <em id="blocksMined" class="stats">...</em>
-        </li>
-        <li>
-          Blocks Placed:
-          <em id="blocksPlaced" class="stats">...</em>
-        </li>
-        <li>
-          Mobs Killed:
-          <em id="mobsKilled" class="stats">...</em>
-        </li>
-        <li>
-          Deaths:
-          <em id="totalDeaths" class="stats">...</em>
-        </li>
-        <li>
-          Times Slept:
-          <em id="timesDlept" class="stats">...</em>
-        </li>
-        <li>
-          Distance Travelled:
-          <em id="distanceTravelled" class="stats">... km</em>
-        </li>
-        <li>
-          Time Played:
-          <em id="totalTimePlayed" class="stats">... hrs</em>
-        </li>
-        <li>
-          Current Uptime:
-          <em id="currentUptime" class="stats">... hrs</em>
-        </li>
-        <li>
-          World Time (in minecraft days):
-          <em id="worldTime" class="stats">Day ...</em>
-        </li>
-      </ul>
-      <h2 id="discord">Discord</h2>
-      <p>
-        To join JavaRock, you need to be in our discord server as this allows me
-        to moderate the server more easily. To join the server, ask someone you
-        know that's already in the server or visit the
-        <a href="/html/contact.html">Contact Us</a>
-        page.
-      </p>
-      <p>
-        Any information here will be updated to the best of our abilties when/if
-        it changes, but we cannot guarantee it will always be 100% accurate.
-      </p>
+      <br>
+      <div class="section">
+        <h2 id="about">About JavaRock</h2>
+        <p>
+          JavaRock was started because I believe that Java Edition is superior,
+          yet many of my friends only can play on Bedrock. I found a plugin called
+          GeyserMC, and it allows for crossplay between the two editions (with the
+          server running on Java).
+        </p>
+      </div>
+      <div class="section">
+        <p>The server runs on Fabric 1.17.1, and the current plugins are:</p>
+        <ul>
+          <li>
+            <a href="https://geysermc.org/" target="_blank">
+              GeyserMC -
+              <em>crossplay</em>
+            </a>
+          </li>
+          <li>
+            <a href="https://geysermc.org/" target="_blank">
+              Floodgate -
+              <em>crossplay</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/cave-biomes"
+              target="_blank"
+            >
+              Cave Biomes -
+              <em>terrain</em>
+            </a>
+          </li>
+          <li>
+            <a href="https://modrinth.com/mod/crowmap" target="_blank">
+              Crowmap -
+              <em>utility</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/simplerharvest"
+              target="_blank"
+            >
+              Simpler Harvest -
+              <em>utility</em>
+            </a>
+          </li>
+          <li>
+            <a href="https://modrinth.com/mod/keepheadnames" target="_blank">
+              Keep Head Names -
+              <em>utility</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric"
+              target="_blank"
+            >
+              Mini MOTD - utility
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Haven-King/SAX/tree/1.1" target="_blank">
+              SAX (1.17 branch) -
+              <em>utility</em>
+            </a>
+          </li>
+          <li>
+            <a href="https://modrinth.com/mod/styledplayerlist" target="_blank">
+              Styled Player List -
+              <em>utility</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/lithium"
+              target="_blank"
+            >
+              Lithium -
+              <em>performance</em>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Tuinity/Starlight" target="_blank">
+              Starlight -
+              <em>performance</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs"
+              target="_blank"
+            >
+              Fat Experiance Orbs -
+              <em>performance</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric"
+              target="_blank"
+            >
+              Fast Furnace -
+              <em>performance</em>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://modrinth.com/mod/worldspecificviewdistance"
+              target="_blank"
+            >
+              World Specific View Distance -
+              <em>performance</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <p>Also, the changed gamerules are:</p>
+        <ul>
+          <li>PlayersSleepingPercentage: 25% (yeah thats it lol)</li>
+        </ul>
+      </div>
+      <div class="section">
+        <p>
+          Bedrock and Java Edition crossplay isn't perfect however, so there are a
+          few downsides to playing the server on Bedrock as opposed to Java (which
+          is why if you have the option you should play on Java as these issues
+          don't exist there):
+        </p>
+        <ul>
+          <li>
+            On mobile, buckets only place in the middle of the screen as the Java
+            Edition packet doesn't specify where the block is placed
+          </li>
+          <li>
+            Bedrock players may occasionally experiance rubberbanding when going
+            over slabs, stairs, etc. as Bedrock treats their hitboxes differently
+          </li>
+          <li>
+            Bedrock players can't easily put things other than shields, totems,
+            and arrows into their offhands as this is a client-side limitation.
+            You can emote to swap your main hand and offhand, but you can't use
+            your offhand items unless you can on Bedrock.
+          </li>
+          <li>
+            The glowing effect doesn't work and the spectral arrow texture is just
+            a normal arrow as they don't exist in Bedrock
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2 id="statistics">Server Statistics</h2>
+        <p>Here is what the members of the server have accomplished so far:</p>
+        <ul>
+          <!--there are classes for each statistic to use in backend (what's in the em tags)-->
+          <li>
+            Blocks Mined:
+            <em id="blocksMined" class="stats">...</em>
+          </li>
+          <li>
+            Blocks Placed:
+            <em id="blocksPlaced" class="stats">...</em>
+          </li>
+          <li>
+            Mobs Killed:
+            <em id="mobsKilled" class="stats">...</em>
+          </li>
+          <li>
+            Deaths:
+            <em id="totalDeaths" class="stats">...</em>
+          </li>
+          <li>
+            Times Slept:
+            <em id="timesDlept" class="stats">...</em>
+          </li>
+          <li>
+            Distance Travelled:
+            <em id="distanceTravelled" class="stats">... km</em>
+          </li>
+          <li>
+            Time Played:
+            <em id="totalTimePlayed" class="stats">... hrs</em>
+          </li>
+          <li>
+            Current Uptime:
+            <em id="currentUptime" class="stats">... hrs</em>
+          </li>
+          <li>
+            World Time (in minecraft days):
+            <em id="worldTime" class="stats">Day ...</em>
+          </li>
+        </ul>
+      </div>
+      <div class="section">
+        <h2 id="discord">Discord</h2>
+        <p>
+          To join JavaRock, you need to be in our discord server as this allows me
+          to moderate the server more easily. To join the server, ask someone you
+          know that's already in the server or visit the
+          <a href="/html/contact.html">Contact Us</a>
+          page.
+        </p>
+      </div>
       <script src="/js/index.js"></script>
     </main>
     <footer>
+      <p class="footerdisclaimer">
+        Any information here will be updated to the best of our abilties when/if
+        it changes, but we cannot guarantee it will always be 100% accurate.
+      </p>
       <a class="git-img" href="https://github.com/035WasTaken/javarock-site">
         <img src="../images/github-transparent.png" alt=" " />
       </a>

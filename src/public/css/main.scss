@@ -85,6 +85,13 @@ body {
         font-weight: bold;
       }
     }
+    div.section {
+      border-width: 2px;
+      border-radius: 1.5em;
+      background-color: #b6ecf0;
+      border-color: #000000;
+      padding: .25em;
+    }
     h1 {
       text-align: center;
       margin-bottom: 0;

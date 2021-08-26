@@ -7,4 +7,6 @@ vscode*
 *.log
 /.replit
 
+*.map.css
+
 !.gitignore
