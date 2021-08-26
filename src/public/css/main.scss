@@ -86,12 +86,15 @@ body {
       }
     }
     div.section {
-      border-width: 8px;
+      border-width: 3px;
       border-style: solid;
-      border-radius: .1em;
+      border-radius: .5em;
       background-color: #eff5f5;
       border-color: #000000;
-      padding: .35em;
+      padding-left: .35em;
+      padding-right: .35em;
+      padding-top: .2em;
+      padding-bottom: .2em;
       height: auto;
     }
     h1 {
