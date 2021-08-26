@@ -105,11 +105,14 @@ body main div.disclaimer p {
 }
 
 body main div.section {
-  border-width: 2px;
-  border-radius: 1.5em;
-  background-color: #b6ecf0;
+  border-width: 8px;
+  border-radius: .7em;
+  background-color: #cfe2e2;
   border-color: #000000;
   padding: .25em;
+  padding-top: 0;
+  padding-bottom: 0;
+  height: auto;
 }
 
 body main h1 {
