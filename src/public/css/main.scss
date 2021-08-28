@@ -2,6 +2,7 @@
 $accent: #a4d0d8;
 $rosybrown-transparant: rgba(188, 143, 143, 0.623);
 $darkbg: #001122;
+$discordbg: #2d3131;
 
 //custom scrollbar
 ::-webkit-scrollbar {
@@ -10,6 +11,10 @@ $darkbg: #001122;
 ::-webkit-scrollbar-thumb {
   background-color: #1f2a35a1;
   border-radius: 2.5px;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -22,9 +27,10 @@ body {
     color: $accent;
   }
   header {
+    position: fixed;
+    top: 0;
     width: 100%;
     background-color: #000;
-    //background-color: #2d3131;
     padding-left: 0em;
     padding-right: 0em;
     padding-top: .1em;
@@ -94,7 +100,6 @@ body {
   }
   main {
     margin: 2em 0 0 0;
-
     div.disclaimer {
       background-color: rgb(255, 123, 0);
       color: #000;
