@@ -3,11 +3,21 @@ $accent: #a4d0d8;
 $rosybrown-transparant: rgba(188, 143, 143, 0.623);
 $darkbg: #001122;
 
+//custom scrollbar
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #1f2a35a1;
+  border-radius: 2.5px;
+}
+
 body {
   font-family: Montserrat, sans-serif;
   margin: 0;
   background-color: $darkbg;
   color: #fff;
+  overflow: overlay;
   a {
     color: $accent;
   }
