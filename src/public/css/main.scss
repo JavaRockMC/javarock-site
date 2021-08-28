@@ -15,6 +15,13 @@ $discordbg: #2d3131;
 
 html {
   scroll-behavior: smooth;
+
+  a.anchor {
+    display: block;
+    position: relative;
+    top: -12em;
+    visibility: hidden;
+  }
 }
 
 body {
@@ -99,7 +106,8 @@ body {
     }
   }
   main {
-    margin: 2em 0 0 0;
+    margin: 6em 0 0 0;
+    padding-top: 0em;
     div.disclaimer {
       background-color: rgb(255, 123, 0);
       color: #000;
@@ -109,7 +117,6 @@ body {
         font-weight: bold;
       }
     }
-
     //div.spacer and div.wave<x> are for the cool wave 😎
     div.bigwave {
       aspect-ratio: 900/400;
