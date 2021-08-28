@@ -124,11 +124,12 @@ body {
       margin: 0;
       padding: .1px 2em;
       display: inline-block;
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
     }
     .rosy {
       background-color: rosybrown;
-      color: #fff;
-      width: 100%;
     }
 
     h1 {
