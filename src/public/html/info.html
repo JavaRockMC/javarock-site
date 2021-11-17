@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="JavaRock" />
+  <meta name="description" content="Extra information about the JavaRockSMP" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+  <title>Info · JavaRock</title>
+</head>
+
+<body>
+  <header class="clearfix">
+    <div class="logo">
+      <a class="img" href="/">
+        <img class="preload" id="navimg" src="/images/javarock-small.png" alt="Home" />
+      </a>
+    </div>
+    <div class="themetoggle">
+      <button class="themetoggle">
+        <img src="/svg/theme.svg" alt=" ">
+      </button>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/#about" class="navlink">About</a></li>
+        <li><a href="/#statistics" class="navlink">Statistics</a></li>
+        <li><a href="/#join" class="navlink">Join</a></li>
+        <li><a href="/html/troll.html" class="navlink">Funny</a></li>
+        <li><a href="/html/info.html" class="navlink">Extra Info</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1 class="centered movedown">Extra Information About JavaRock</h1>
+    <div class="contents">
+      <h2 class="contents">Contents</h2>
+      <ul>
+        <li>1 <a href="#software">Server Software</a></li>
+        <li class="sub">1.1 <a href="#software.plugins">Plugins</a></li>
+        <li class="sub">1.2 <a href="#software.datapacks">Datapacks</a></li>
+        <li class="subsub">1.2.1 <a href="#software.datapacks.custom">Custom Datapack</a></li>
+        <li>2 <a href="#bedrock">Bedrock Info</a></li>
+        <li class="sub">2.1 <a href="#bedrock.bugs">Bugs</a></li>
+        <li class="sub">2.2 <a href="#bedrock.settings">Settings</a></li>
+        <li class="sub">2.3 <a href="#bedrock.linking">Linking</a></li>
+        <li>3 <a href="#console">Joining from Console</a></li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2 class="anchor" id="software">Server Software</h2>
+      <p>When Season 4 starts, the server will be running Fabric 1.18 with <a
+          href="https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium</a> and <a
+          href="https://github.com/Tuinity/Starlight">Starlight</a> used to
+        increase the performance of the server. (Lithium makes server calculations more efficient and Starlight improves
+        the lighting engine; it is better than Phosphor.)</p>
+      <p>To allow crossplay, we have <a href="https://geysermc.org/">GeyserMC</a> and <a
+          href="https://geysermc.org/">Floodgate</a>, which translate the packets
+        from the Java Edition so that the Bedrock client can understand them, and vice versa. Floodgate converts Bedrock
+        XUIDs to Java UUIDs so that Bedrock players don't need a Java account to play.</p>
+      <h3 class="anchor" id="software.plugins">Plugins</h2>
+        <p>Other than Lithium/Starlight, we have some plugins that allow for minor improvements/features that you
+          normally
+          don't see in the vanilla game. These are:
+        </p>
+        <ul>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/crowmap" class="bold">Crowmap:</a> updates maps
+            without needing to hold them, as long as they're in your inventory</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/simplerharvest" class="bold">Simpler Harvest:</a>
+            adds
+            the ability to right click to harvest and auto replant
+            crops</li>
+          <li><a href="https://modrinth.com/mod/keepheadnames" class="bold">Keep Head Names:</a> fixes <a
+              href="">this</a>
+            bug</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric" class="bold">Mini MOTD:</a> lets us
+            have custom randomized MOTDs</li>
+          <li><a href="https://github.com/Haven-King/SAX/tree/1.1" class="bold">SAX:</a> Simple Anti-Xray</li>
+          <li><a href="https://modrinth.com/mod/styledplayerlist" class="bold">Styled Player List:</a> allows us to make
+            our custom player list</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs" class="bold">Fat Experience
+              Orbs:</a> reduces lag by letting XP orbs clump into one</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric" class="bold">Fast
+              Furnace:</a> increases the performance of the furnace by caching the last
+            recipe used (does not actually make the furnace smelt faster!)</li>
+          <li><a href="https://modrinth.com/mod/worldspecificviewdistance" class="bold">World Specific View
+              Distance:</a>
+            lets the server-side render distance of the
+            overworld be higher than the nether and end</li>
+        </ul>
+        <h3 class="anchor" id="software.datapacks">Datapacks</h3>
+        <p>We are using some packs from Vanilla Tweaks, what they do are basically self explanatory:</p>
+        <ul>
+          <li>AFK Display</li>
+          <li>Durability Ping</li>
+          <li>More Mob Heads</li>
+          <li>Player Head Drops</li>
+          <li>Silence Mobs</li>
+          <li>Track Raw Statistics</li>
+          <li>Track Statistics</li>
+          <li>Wandering Trades</li>
+        </ul>
+        <h4 class="anchor" id="software.datapacks.custom">Custom Datapack</h4>
+        <p>We are using a custom datapack to have weekly events, such as tag or wither hunt.</p>
+    </div>
+    <div class="section">
+      <h2 class="anchor" id="bedrock">Bedrock Info</h2>
+      <p class="anchor" id="bedrock.java-features">Since the Bedrock and Java Editions are fundamentally different, if
+        you are playing
+        on Bedrock Edition, some mechanics are different. These include:
+      <ul>
+        <li><strong>Combat:</strong> If you are an avid Bedrock player, combat works a bit different in the Java
+          Edition. There is an attack cooldown (represented by a bar in the middle of the screen when you attack), and
+          your weapon won't do as much damage if it's not full. Also, axes do more damage than swords, but have a longer
+          attack cooldown.</li>
+        <li><strong>Redstone:</strong> Some redstone devices and mechanics (eg. <a
+            href="https://minecraft.fandom.com/wiki/Tutorials/Quasi-connectivity">quasi-connectivity</a>) work slightly
+          differently in Java than in Bedrock. If you are building a tutorial for some redstone device, Bedrock ones may
+          not work. This also applies to things such as villager breeders/etc.</li>
+        <li><strong>Raids:</strong> You can get up to Bad Omen V (by killing 5 banner pillagers), which will result in a
+          harder, but more rewarding, raid.</li>
+        <li><strong>Movement:</strong> Crawling in 1 block tall spaces is possible (via being pushed into a 1 block tall
+          space), and you can sneak into 1.5 block tall gaps.</li>
+        <li><strong>Nether:</strong> The nether build limit is now y=256, meaning you can make your gold farms on the
+          nether roof!</li>
+        <li><strong>Offhand:</strong> Although you cannot use the item unless it's possible to do so in Bedrock, you do
+          have the ability to put any item in your offhand now through emoting or running '/geyser offhand'.</li>
+      </ul>
+      </p>
+      <h3 class="anchor" id="bedrock.bugs">Bugs</h3>
+      <p>There are a few things that may be buggy for Bedrock players due to the differences in the two games, notably:
+      <ul>
+        <li><strong>Mobile Buckets:</strong> Java Edition's packet for placing and picking up fluids only includes that
+          the player is doing this, so they only place in the middle of the screen, regardless where you tap. (To remedy
+          this, you can go into Settings > Touch and enable Split Controls.)</li>
+        <li><strong>Crafting items in bulk:</strong> Crafting a ton of an item may be a bit slow due to the way Geyser
+          translates crafting packets.</li>
+        <li><strong>Bamboo:</strong> Bamboo (and also sometimes dripstone) is extremely buggy when you walk through it.
+          This is because Bedrock renders the bamboo in a different spot than it is on Java, making the server thing you
+          are in the block and lagging you back.</li>
+        <li><strong>Damage:</strong> The bedrock attack damage descriptions for weapons are incorrect, since 1.9 combat
+          did not really come to Bedrock.</li>
+        <li><strong>Slabs:</strong> Rarely there may be some slab or stair that lags you back when you try to walk up
+          it, this is because Bedrock and Java treat the hitbox of stairs differently.</li>
+      </ul>
+      </p>
+      <h3 class="anchor" id="bedrock.settings">Settings</h3>
+      <p>There are two settings that you can change for yourself specific to the server; enabling/disabling showing
+        coordinates and setting the attack cooldown indicator to under your crosshair or above your hotbar. These are
+        specific to you and can be accessed through Settings > Server.</p>
+      <h3 class="anchor" id="bedrock.linking">Linking</h3>
+      <p>You can link your Java and Bedrock accounts (so that when you join on Bedrock you will be automatically logged
+        into your Java account) by entering the linking server (<a>link.geysermc.org</a>) and running /linkaccount.</p>
+    </div>
+    <div class="section">
+      <h2 class="anchor" id="console">Consoles</h2>
+      <p>Console users will be aware that you cannot join custom servers. Or so you thought! There are (simple)
+        ways around this limitation:
+      </p>
+      <h3 class="method">Method 1:</h3>
+      <p class="requirements">Requires: a phone/tablet (connected to the same network as your console), &lt;5 minutes
+      </p>
+      <p class="requirements">Works on: any console</p>
+      <p>This method simply requires you to download an app (<a
+          href="https://apps.apple.com/us/app/bedrocktogether/id1534593376">Bedrock Together</a> (iOS) and <a
+          href="">MineProxy - Droid</a> (Android)). In the app, you just have to enter the IP of the server you
+        want to join, the port (default is 19132), and tap run or start. The server will then show up as a LAN game.</p>
+      <h3 class="method">Method 2:</h3>
+      <p class="requirements">Requires: the server tab, 4-8 minutes</p>
+      <p class="requirements">Works on: XBOX and Nintendo Switch</p>
+      <p>This method is slightly more complicated, as it requires changing your DNS. Videos on how to do this can be
+        found below, but what's important is that you need to change your primary DNS to <em>104.238.130.180</em>, and
+        change the secondary DNS to any popular DNS server (I prefer Cloudflare's DNS server (<em>1.1.1.1</em>),
+        although in the
+        videos he uses Google's DNS (<em>8.8.8.8</em>).)</p>
+      <p>To undo this, you can change your DNS back to automatic.</p>
+      <div class="videos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/zalT_oR1nPM" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/g8mHvasVHMs" title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+</body>
+<script src="/js/preload.js"></script>
+<script src="/js/theme.js"></script>
+
+</html>

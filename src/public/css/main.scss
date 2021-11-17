@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300;400;500;600;700;800;900&display=swap");
 $accent: #a4d0d8;
-$rosybrown-transparant: rgba(188, 143, 143, 0.623);
+$rosybrown-transparent: rgba(188, 143, 143, 0.623);
 $darkbg: #001122;
 $discordbg: #2d3131;
 
@@ -30,6 +30,7 @@ body {
   background-color: $darkbg;
   color: #fff;
   overflow: overlay;
+  transition: ease 300ms;
   a {
     color: $accent;
   }
@@ -40,12 +41,13 @@ body {
     background-color: #000;
     padding-left: 0em;
     padding-right: 0em;
-    padding-top: .1em;
+    padding-top: 0.1em;
     padding-bottom: 0em;
     border-bottom: 0.25em;
     border-bottom-color: rosybrown;
     border-bottom-style: solid;
-    div {
+    transition: ease 200ms;
+    div.logo {
       padding-left: 2em;
       img {
         transition: ease 350ms;
@@ -53,7 +55,7 @@ body {
         height: 3.25em;
         float: left;
         padding-left: 0;
-        margin: .1em 0 0 0;
+        margin: 0.1em 0 0 0;
         border-radius: 1.8em;
         border-color: rosybrown;
         border-width: 0.2em;
@@ -68,6 +70,39 @@ body {
         }
       }
     }
+    div.themetoggle {
+      width: 2em;
+      height: 2em;
+      display: inline;
+      position: fixed;
+      margin-top: 1em;
+      margin-left: 1em;
+      button {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: rosybrown;
+        background-color: #fff;
+        transition: ease 350ms;
+        &:hover {
+          border-radius: 43%;
+          transition: ease 350ms;
+          &:active {
+            border-radius: 50%;
+            transition: ease 150ms;
+          }
+        }
+        img {
+          transition: ease 100ms;
+          padding-left: 5%;
+          padding-top: 8%;
+        }
+      }
+    }
+    // Navigation Bar
     nav {
       float: right;
       ul {
@@ -88,25 +123,46 @@ body {
           }
           a::before {
             content: "";
-            height: 1.1em;
+            height: .2em; // 1.1em for highlight; .2 for underline
             display: block;
             width: 0px;
-            background-color: $rosybrown-transparant;
+            background-color: rosybrown; //$rosybrown-transparent is transparent
             position: absolute;
             bottom: -0.05em;
-            left: -0.1em;
-            transition: all ease 750ms;
+            left: 2%;
+            transition: all ease 1000ms;
           }
           a:hover::before {
-            width: 106%;
+            width: 95%;
           }
+          // this is one thing i hate about sass
         }
       }
     }
   }
+  // Main pages
   main {
-    margin: 6em 0 0 0;
+    margin: 0;
     padding-top: 0em;
+    @media (min-width: 700px) {
+      .mainbg {
+        background-image: url("../images/temp-mc-img.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: -199px; // thanks trent for the -1px
+        padding-top: 5em;
+      }
+    }
+    @media (max-width: 700px) {
+      .mainbg {
+        background-image: url("../images/temp-mc-img.png");
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-position-y: 0px;
+      }
+    }
     div.disclaimer {
       background-color: rgb(255, 123, 0);
       color: #000;
@@ -116,34 +172,62 @@ body {
         font-weight: bold;
       }
     }
-    //div.spacer and div.wave<x> are for the cool wave 😎
-    div.bigwave {
-      aspect-ratio: 900/400;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
+    //div.spacer and div.wave<x> are for the cool waves 😎
+    @media (min-width: 700px) {
+      div.bigwave {
+        aspect-ratio: 900/400;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      div.smallwave {
+        aspect-ratio: 900/150;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      div.bigwavedark {
+        background-image: url("../svg/bigwavedark.svg");
+      }
+      div.smwavedark1 {
+        background-image: url("../svg/smwavedark1.svg");
+      }
+      div.smwavedark2 {
+        background-image: url("../svg/smwavedark2.svg");
+      }
     }
-    div.smallwave {
-      aspect-ratio: 900/150;
-      width: 100%;
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-    }
-    div.bigwavedark {
-      background-image: url('../svg/bigwavedark.svg');
-    }
-    div.smwavedark1 {
-      background-image: url('../svg/smwavedark1.svg');
-    }
-    div.smwavedark2 {
-      background-image: url('../svg/smwavedark2.svg');
+
+    @media (max-width: 700px) {
+      div.bigwave {
+        aspect-ratio: 675/900;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      div.smallwave {
+        aspect-ratio: 675/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+      div.bigwavedark {
+        background-image: url("../svg/bigwavedark.phone.svg");
+      }
+      div.smwavedark1 {
+        background-image: url("../svg/smwavedark1.phone.svg");
+      }
+      div.smwavedark2 {
+        background-image: url("../svg/smwavedark2.phone.svg");
+      }
     }
 
     div.section {
       margin: 0;
-      padding: .1px 2em;
+      padding: 0.1px 2em;
       display: inline-block;
       width: 100%;
       max-width: 100%;
@@ -153,33 +237,70 @@ body {
       background-color: rosybrown;
     }
 
-    h1 {
+    h1.image {
       text-align: center;
       margin-bottom: 0;
       padding-top: 10em;
+      transition: none !important;
+    }
+    .movedown {
+      margin-top: 4em;
     }
     h2.javarockDesc {
       text-align: center;
       margin-top: 0;
       padding-bottom: 10em;
+      transition: none !important;
       strong {
         font-weight: normal;
       }
     }
+    div.contents {
+      width: fit-content;
+      border-color: #4f5561;
+      border: 0.2em solid;
+      padding: 1em;
+      margin: 2em;
+      h2 {
+        margin-top: 0;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+        li.sub {
+          margin-left: 1em;
+        }
+        li.subsub {
+          margin-left: 2em;
+        }
+      }
+    }
+    h3.method {
+      margin-bottom: 0;
+    }
+    p.requirements {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: small;
+      font-style: italic;
+      color: #bbb;
+    }
   }
+  // Footer (in case that wasn't obvious)
   footer {
     margin: 0;
     display: inline;
     div.footer {
       margin: 0;
       padding: 0 3em 2em;
-      font-size: .7em;
+      font-size: 0.7em;
       div.github {
         display: inline-flex;
         align-items: center;
         a.git-txt {
-          padding-left: .5em;
-          padding-bottom: .15em;
+          padding-left: 0.5em;
+          padding-bottom: 0.15em;
           text-decoration: none;
           font-weight: 600;
           color: #fff;
@@ -192,14 +313,83 @@ body {
   }
 }
 
+// general stuff
+.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.centered {
+  text-align: center;
+}
+
+// adds offset to anchors to correct for fixed navbar
+.anchor {
+  pointer-events: none;
+  &:before {
+    pointer-events: none;
+    content: "";
+    display: block;
+    position: relative;
+    width: 0;
+    height: 4em;
+    margin-top: -4em;
+  }
+}
+
+// when you do float left and float right it breaks and this fixes that
 .clearfix {
-  //when you do float left and float right it breaks and this fixes that
   content: "";
   display: table;
   clear: both;
 }
 
+// removes animation from navbar image while page is loading, re-added in javascript after page is loaded, fixes some animations (by some i mean when the page loads the IMAGE HAD A HEART ATTACK THIS TOOK ME DAYS TO FIGURE OUT)
 .preload {
-  //removes animation from navbar image while page is loading, re-added in javascript after page is loaded, fixes some animations (by some i mean when the page loads the IMAGE HAD A HEART ATTACK THIS TOOK ME DAYS TO FIGURE OUT)
   transition: none !important;
+}
+
+// LIGHT THEME SHIT
+body.light {
+  background-color: #fff;
+  color: #000 !important;
+
+  header {
+    background-color: rosybrown !important;//#4f5561;
+
+    div.themetoggle {
+      button {
+        background-color: #000;
+        img {
+          filter: invert(100%);
+        }
+      }
+    }
+    a {
+      color: #fff !important;
+    }
+    border-bottom: $accent !important;
+  }
+  main {
+    h1.image {
+      color: #fff !important;
+    }
+    h2.javarockDesc {
+      color: #fff;
+    }
+    div.disclaimer {
+      color: #fff;
+    }
+  }
+  footer div.footer div.github {
+    a.git-txt {
+      color: #000 !important;
+    }
+    img {
+      content: url("../images/github-transparent.png");
+    }
+  }
 }

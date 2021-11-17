@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.server.js",
-    "build": "tsc",
+    "build": "tsc & sass src/public/css:src/public/css",
     "postinstall": "npm run build"
   },
   "repository": {
@@ -26,7 +26,11 @@
     "glob": "^7.1.7",
     "got": "^11.8.2",
     "nanoid": "^3.1.25",
-    "nodemon": "^2.0.12",
+    "nodemon": "^2.0.14",
+    "sass": "^1.43.4",
     "typescript": "^4.3.5"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.6"
   }
 }

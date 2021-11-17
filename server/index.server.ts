@@ -31,6 +31,11 @@ app.get("/", (req, res) => {
     res.sendFile(`${PATH}/html/index.html`)
 })
 
+// this will probably be useful later so i put it here
+app.get("/login", (req, res) => {
+    res.sendFile(`${PATH}/html/login.html`)
+})
+
 app.get("/home", (req, res) => {
     res.redirect("/");
 })
