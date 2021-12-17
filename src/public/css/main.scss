@@ -123,7 +123,7 @@ body {
           }
           a::before {
             content: "";
-            height: .2em; // 1.1em for highlight; .2 for underline
+            height: 0.2em; // 1.1em for highlight; .2 for underline
             display: block;
             width: 0px;
             background-color: rosybrown; //$rosybrown-transparent is transparent
@@ -146,17 +146,18 @@ body {
     padding-top: 0em;
     @media (min-width: 700px) {
       .mainbg {
-        background-image: url("../images/temp-mc-img.png");
+        background-image: url("../images/javarock_img.png");
         background-size: auto;
         background-repeat: no-repeat;
         background-position-x: center;
         background-position-y: -199px; // thanks trent for the -1px
         padding-top: 5em;
+        transition: ease 1000ms;
       }
     }
     @media (max-width: 700px) {
       .mainbg {
-        background-image: url("../images/temp-mc-img.png");
+        background-image: url("../images/javarock_img.png");
         background-size: auto;
         background-repeat: no-repeat;
         background-position-x: center;
@@ -279,6 +280,11 @@ body {
     h3.method {
       margin-bottom: 0;
     }
+    .biomeMap {
+      aspect-ratio: 74/47;
+      max-width: 130vh;
+      width: 100%;
+    }
     p.requirements {
       margin-top: 0;
       margin-bottom: 0;
@@ -358,7 +364,17 @@ body.light {
   color: #000 !important;
 
   header {
-    background-color: rosybrown !important;//#4f5561;
+    background-color: rosybrown !important; //#4f5561;
+
+    nav {
+      ul {
+        li {
+          a::before {
+            background-color: white !important;
+          }
+        }
+      }
+    }
 
     div.themetoggle {
       button {
@@ -374,6 +390,9 @@ body.light {
     border-bottom: $accent !important;
   }
   main {
+    .mainbg {
+      background-image: url("../images/javarock_img_day.png") !important;
+    }
     h1.image {
       color: #fff !important;
     }

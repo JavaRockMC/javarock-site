@@ -27,7 +27,7 @@
     <nav>
       <ul>
         <li><a href="/#about" class="navlink">About</a></li>
-        <li><a href="/#statistics" class="navlink">Statistics</a></li>
+        <li><a href="/#statistics" class="navlink">Biome Map</a></li>
         <li><a href="/#join" class="navlink">Join</a></li>
         <li><a href="/html/troll.html" class="navlink">Funny</a></li>
         <li><a href="/html/info.html" class="navlink">Extra Info</a></li>
@@ -52,47 +52,40 @@
     </div>
     <div class="section">
       <h2 class="anchor" id="software">Server Software</h2>
-      <p>When Season 4 starts, the server will be running Fabric 1.18 with <a
+      <p>JavaRock Season 4 is running on Fabric 1.18.1 with <a
           href="https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium</a> and <a
           href="https://github.com/Tuinity/Starlight">Starlight</a> used to
         increase the performance of the server. (Lithium makes server calculations more efficient and Starlight improves
-        the lighting engine; it is better than Phosphor.)</p>
+        the lighting engine, which is better than Phosphor.)</p>
       <p>To allow crossplay, we have <a href="https://geysermc.org/">GeyserMC</a> and <a
           href="https://geysermc.org/">Floodgate</a>, which translate the packets
         from the Java Edition so that the Bedrock client can understand them, and vice versa. Floodgate converts Bedrock
         XUIDs to Java UUIDs so that Bedrock players don't need a Java account to play.</p>
       <h3 class="anchor" id="software.plugins">Plugins</h2>
-        <p>Other than Lithium/Starlight, we have some plugins that allow for minor improvements/features that you
-          normally
-          don't see in the vanilla game. These are:
+        <p>Other than Lithium/Starlight and Geyser/Floodgate, we have some plugins that allow for minor
+          improvements/features that you normally don't see in the vanilla game. These are:
         </p>
         <ul>
-          <li><a href="https://www.curseforge.com/minecraft/mc-mods/crowmap" class="bold">Crowmap:</a> updates maps
-            without needing to hold them, as long as they're in your inventory</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/antixray" class="bold">AntiXray:</a> Tbh people that
+            use x-ray are just bad at the game 😳😳</li>
           <li><a href="https://www.curseforge.com/minecraft/mc-mods/simplerharvest" class="bold">Simpler Harvest:</a>
-            adds
-            the ability to right click to harvest and auto replant
+            adds the ability to right click to harvest and auto replant
             crops</li>
           <li><a href="https://modrinth.com/mod/keepheadnames" class="bold">Keep Head Names:</a> fixes <a
-              href="">this</a>
+              href="https://bugs.mojang.com/browse/MC-174496">this</a>
             bug</li>
-          <li><a href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric" class="bold">Mini MOTD:</a> lets us
-            have custom randomized MOTDs</li>
-          <li><a href="https://github.com/Haven-King/SAX/tree/1.1" class="bold">SAX:</a> Simple Anti-Xray</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/minimotd-fabric" class="bold">Mini MOTD:</a> Makes
+            making MOTDs easier</li>
           <li><a href="https://modrinth.com/mod/styledplayerlist" class="bold">Styled Player List:</a> allows us to make
-            our custom player list</li>
-          <li><a href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs" class="bold">Fat Experience
-              Orbs:</a> reduces lag by letting XP orbs clump into one</li>
+            the custom tab list</li>
+          <li><a href="https://www.curseforge.com/minecraft/mc-mods/ledger" class="bold">Ledger:</a> logs your every
+            action (makes finding out who took those diamonds out of your chest extremely easy!)</li>
           <li><a href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric" class="bold">Fast
               Furnace:</a> increases the performance of the furnace by caching the last
             recipe used (does not actually make the furnace smelt faster!)</li>
-          <li><a href="https://modrinth.com/mod/worldspecificviewdistance" class="bold">World Specific View
-              Distance:</a>
-            lets the server-side render distance of the
-            overworld be higher than the nether and end</li>
         </ul>
         <h3 class="anchor" id="software.datapacks">Datapacks</h3>
-        <p>We are using some packs from Vanilla Tweaks, what they do are basically self explanatory:</p>
+        <p>We are using some packs from Vanilla Tweaks; what they do are basically self explanatory:</p>
         <ul>
           <li>AFK Display</li>
           <li>Durability Ping</li>
@@ -102,9 +95,12 @@
           <li>Track Raw Statistics</li>
           <li>Track Statistics</li>
           <li>Wandering Trades</li>
+          <li>Back to Blocks</li>
+          <li>Universal Dyeing</li>
         </ul>
-        <h4 class="anchor" id="software.datapacks.custom">Custom Datapack</h4>
-        <p>We are using a custom datapack to have weekly events, such as tag or wither hunt.</p>
+        <h4 class="anchor" id="software.datapacks.custom">Custom Datapacks</h4>
+        <p>We are using a custom datapack to have weekly events, such as tag or wither hunt. In addition to this
+          includes a datapack adding Terraria music to the game!</p>
     </div>
     <div class="section">
       <h2 class="anchor" id="bedrock">Bedrock Info</h2>
@@ -135,7 +131,7 @@
       <ul>
         <li><strong>Mobile Buckets:</strong> Java Edition's packet for placing and picking up fluids only includes that
           the player is doing this, so they only place in the middle of the screen, regardless where you tap. (To remedy
-          this, you can go into Settings > Touch and enable Split Controls.)</li>
+          this, you can go into Settings&nbsp;>&nbsp;Touch and enable Split Controls.)</li>
         <li><strong>Crafting items in bulk:</strong> Crafting a ton of an item may be a bit slow due to the way Geyser
           translates crafting packets.</li>
         <li><strong>Bamboo:</strong> Bamboo (and also sometimes dripstone) is extremely buggy when you walk through it.
@@ -166,7 +162,7 @@
       <p class="requirements">Works on: any console</p>
       <p>This method simply requires you to download an app (<a
           href="https://apps.apple.com/us/app/bedrocktogether/id1534593376">Bedrock Together</a> (iOS) and <a
-          href="">MineProxy - Droid</a> (Android)). In the app, you just have to enter the IP of the server you
+          href="">MineProxy - Droid</a> (Android). In the app, you just have to enter the IP of the server you
         want to join, the port (default is 19132), and tap run or start. The server will then show up as a LAN game.</p>
       <h3 class="method">Method 2:</h3>
       <p class="requirements">Requires: the server tab, 4-8 minutes</p>

@@ -30,7 +30,7 @@
     <nav>
       <ul>
         <li><a href="#about" class="navlink">About</a></li>
-        <li><a href="#statistics" class="navlink">Statistics</a></li>
+        <li><a href="#statistics" class="navlink">Biome Map</a></li>
         <li><a href="#join" class="navlink">Join</a></li>
         <li><a href="/html/troll.html" class="navlink">Funny</a></li>
         <li><a href="/html/info.html" class="navlink">Extra Info</a></li>
@@ -50,7 +50,7 @@
         An SMP that has crossplay with the Bedrock and Java Editions of
         Minecraft
         <br>
-        <strong>This is a temporary image!</strong>
+        <strong>This image will be updated as spawn progresses!</strong>
       </h2>
       <div class="bigwave bigwavedark"></div>
     </div>
@@ -62,8 +62,7 @@
         GeyserMC, and it allows for crossplay between the two editions (with the
         server still running on Java).
       </p>
-      <p>Season 4 is starting soon on Java 1.18, and we will be using the following plugins (as/if/when they are
-        released):</p>
+      <p>JavaRock Season 4 has started, and is running on Fabric 1.18.1, using the following plugins:</p>
       <ul>
         <li>
           <a href="https://geysermc.org/" target="_blank">
@@ -78,14 +77,8 @@
           </a>
         </li>
         <li>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/cave-biomes" target="_blank">
-            Cave Biomes -
-            <em>terrain</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://modrinth.com/mod/crowmap" target="_blank">
-            Crowmap -
+          <a href="https://www.curseforge.com/minecraft/mc-mods/antixray" target="_blank">
+            AntiXray -
             <em>utility</em>
           </a>
         </li>
@@ -107,15 +100,15 @@
           </a>
         </li>
         <li>
-          <a href="https://github.com/Haven-King/SAX/tree/1.1" target="_blank">
-            SAX (1.17 branch) -
+          <a href="https://modrinth.com/mod/styledplayerlist" target="_blank">
+            Styled Player List -
             <em>utility</em>
           </a>
         </li>
         <li>
-          <a href="https://modrinth.com/mod/styledplayerlist" target="_blank">
-            Styled Player List -
-            <em>utility</em>
+          <a href="https://www.curseforge.com/minecraft/mc-mods/ledger" target="_blank">
+            Ledger -
+            <em>logging</em>
           </a>
         </li>
         <li>
@@ -131,20 +124,8 @@
           </a>
         </li>
         <li>
-          <a href="https://www.curseforge.com/minecraft/mc-mods/fat-experience-orbs" target="_blank">
-            Fat Experience Orbs -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
           <a href="https://www.curseforge.com/minecraft/mc-mods/fast-furnace-for-fabric" target="_blank">
             Fast Furnace -
-            <em>performance</em>
-          </a>
-        </li>
-        <li>
-          <a href="https://modrinth.com/mod/worldspecificviewdistance" target="_blank">
-            World Specific View Distance -
             <em>performance</em>
           </a>
         </li>
@@ -165,24 +146,31 @@
         <li>Track Raw Statistics</li>
         <li>Track Statistics</li>
         <li>Wandering Trades</li>
+        <li>Back to Blocks</li>
+        <li>Universal Dyeing</li>
       </ul>
       </p>
       <p>In addition to this, we also have a custom datapack that selects a random event every week. This can be
         something like tag (you should know what this is) or wither hunt (kill as many winners as possible). In games
-        with winners, they will be awarded, but in a game with losers, they will get punished.</p>
+        with winners, they will be awarded, but in a game with losers, they will get punished. We also have a second
+        custom datapack adding Terraria music to the game.</p>
       <br>
       <p>
-        Sadly, crossplay between 2 fundamentally different versions of the game is not (yet) perfected (and thus playing
-        on the Java Edition is a better experience). It does still work well, but these are the most prevalent issues:
+        As what we are using to add crossplay support to the server isn't an official thing done by Mojang, there are
+        currently some flaws with this. The most annoying of these include (these only affect Bedrock users):
       </p>
       <ul>
         <li>
+          Bamboo and dripstone bug the **** out when walking in them, because they aren't placed in the same spot on
+          Bedrock and Java. Essentially, this causes the server to think you are inside a block and move you out.
+        </li>
+        <li>
           On mobile, buckets only place in the middle of the screen as the Java
-          Edition packet doesn't specify where the bucket is placed
+          Edition packet doesn't specify where the bucket is placed.
         </li>
         <li>
           Bedrock players may occasionally experience rubberbanding when going
-          over slabs, stairs, etc. as Bedrock treats their hitboxes differently
+          over slabs, stairs, etc. as Bedrock treats their hitboxes differently.
         </li>
         <li>
           Bedrock players can't easily put things other than shields, totems,
@@ -192,7 +180,7 @@
         </li>
         <li>
           The glowing effect doesn't work and the spectral arrow texture is just
-          a normal arrow as they don't exist in Bedrock
+          a normal arrow as they don't exist in Bedrock.
         </li>
       </ul>
       <br>
@@ -201,8 +189,9 @@
     </div>
     <div class="smallwave smwavedark1"></div>
     <div class="section">
-      <h2 class="anchor" id="statistics">Server Statistics</h2>
-      <p>Well, there were going to be statistics here, but probably going to put bluemap here instead later</p>
+      <h2 class="anchor" id="statistics">Biome Map</h2>
+      <p>Below is the biome map of this season's map:</p>
+      <img src="images/javarock_s4_biome.png" alt="JavaRock Season 4 Biome Map" class="biomeMap">
       <!-- <p>Here is what the members of the server have accomplished so far:</p>
       
         THIS WILL BE COMMENTED OUT UNTIL THIS IS ACTUALLY GOING TO BE USED
